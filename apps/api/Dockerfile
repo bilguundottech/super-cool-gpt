@@ -3,7 +3,7 @@ FROM python:3.12-slim
 # Install uv (fast dependency manager)
 RUN pip install uv
 
-WORKDIR /app/app
+WORKDIR /app
 
 # Copy lock + pyproject first (to leverage Docker cache)
 COPY pyproject.toml uv.lock ./
