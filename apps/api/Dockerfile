@@ -15,4 +15,4 @@ RUN uv sync --frozen
 COPY . .
 
 # Run FastAPI with uvicorn through uv-managed env
-CMD ["uv", "run", "uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["uv", "run", "uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
