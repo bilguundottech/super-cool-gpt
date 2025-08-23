@@ -1,4 +1,4 @@
-import { Button } from "@repo/ui/components/button";
+import { Button } from "@repo/ui/components/ui/button";
 
 const Home = async () => {
   const res = await fetch("https://api.gpt.bilguun.tech");
