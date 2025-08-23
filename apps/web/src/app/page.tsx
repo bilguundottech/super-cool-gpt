@@ -1,3 +1,5 @@
+import { Button } from "@repo/ui/components/button";
+
 const Home = async () => {
   const res = await fetch("https://api.gpt.bilguun.tech");
   const data = await res.json();
@@ -7,6 +9,7 @@ const Home = async () => {
       <main>
         <h1>Super Cool GPT</h1>
         <p>{JSON.stringify(data)}</p>
+        <Button>Click me</Button>
       </main>
     </div>
   );

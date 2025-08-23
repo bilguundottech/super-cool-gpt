@@ -3,12 +3,14 @@
   "version": "0.0.0",
   "private": true,
   "exports": {
-    "./*": "./src/*.tsx"
+    "./components/*": "./src/components/ui/*.tsx",
+    "./styles/globals.css": "./src/styles/globals.css",
+    "./postcss.config": "./postcss.config.mjs"
   },
   "scripts": {
-    "lint": "eslint . --max-warnings 0",
-    "generate:component": "turbo gen react-component",
-    "check-types": "tsc --noEmit"
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "ui:add": "pnpm dlx shadcn@latest add"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
@@ -20,7 +22,11 @@
     "typescript": "5.9.2"
   },
   "dependencies": {
+    "@radix-ui/react-slot": "^1.2.3",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
     "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "react-dom": "^19.1.0",
+    "tailwind-merge": "^3.3.1"
   }
 }
