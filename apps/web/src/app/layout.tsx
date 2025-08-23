@@ -3,6 +3,9 @@ import { ClerkProvider } from "@clerk/nextjs";
 import { ThemeProvider } from "@/components/theme/provider";
 import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
+import LiquidOrbs from "@/components/layout/liquid_orbs";
+import GlassMorphism from "@/components/layout/glass_morphism";
+import GridPattern from "@/components/layout/grid-pattern";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -28,9 +31,9 @@ export default function RootLayout({
 }>) {
   return (
     <ClerkProvider>
-      <html lang="en">
+      <html lang="en" suppressHydrationWarning>
         <body
-          className={`${inter.variable} ${jetbrainsMono.variable} antialiased`}
+          className={`${inter.variable} ${jetbrainsMono.variable} antialiased relative bg-gradient-to-br from-background via-primary/5 to-primary/10 h-screen w-screen overflow-hidden`}
         >
           <ThemeProvider
             attribute="class"
@@ -38,6 +41,9 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
+            <LiquidOrbs />
+            <GlassMorphism />
+            <GridPattern />
             {children}
           </ThemeProvider>
         </body>
