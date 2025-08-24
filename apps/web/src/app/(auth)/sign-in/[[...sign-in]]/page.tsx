@@ -9,7 +9,7 @@ const SignInPage = () => {
           cardBox: "!bg-transparent !shadow-none !border-none",
           card: "!bg-transparent !shadow-none !border-none",
           headerTitle: "!text-foreground",
-          socialButtonsBlockButton: "!border-none !shadow-none ",
+          socialButtonsBlockButton: "!shadow-none !text-foreground",
         },
       }}
     />
